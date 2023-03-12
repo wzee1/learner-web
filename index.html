@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./css/main.css" />
+      <link
+         href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+         rel="stylesheet"
+      />
+      <script src="https://unpkg.com/scrollreveal"></script>
+      <title>Document</title>
+   </head>
+   <body>
+      <header>
+         <div class="nav__content">
+            <div class="nav__notExtended">
+               <p class="nav__logo" id="logo">
+                  <a href="#">
+                     <img src="./assets/logo.svg" alt="Learner Logo" />
+                  </a>
+               </p>
+               <img
+                  src="./assets/hamburger.svg"
+                  alt="Menu Navigation"
+                  class="nav__hamburger"
+                  id="hamburger"
+               />
+            </div>
+            <nav id="menu">
+               <ul class="nav__menu">
+                  <li class="nav__links"><a href="#">Home</a></li>
+                  <li class="nav__links"><a href="#">About</a></li>
+                  <li class="nav__links"><a href="#">Best Courses</a></li>
+                  <li class="nav__links"><a href="#">About Us</a></li>
+                  <li class="sign-in button"><a href="#">Sign In</a></li>
+                  <li class="sign-up button"><a href="#">Sign Up</a></li>
+               </ul>
+            </nav>
+         </div>
+      </header>
+
+      <section class="hero container">
+         <div class="hero__left">
+            <h1 class="hero__header">
+               Start Your Carrer<br />and Become What<br />You
+               <span>Meant To Be</span>
+            </h1>
+            <p class="hero__desc">
+               Lorem ipsum dolor, sit amet consectetur adipisicing.
+            </p>
+
+            <form class="hero__search">
+               <input
+                  type="text"
+                  class="hero__search--input"
+                  placeholder="Search For Courses & Fields etc..."
+               />
+               <div class="hero__search--icon">
+                  <img
+                  src="./assets/search_icon.svg"
+                  alt="Search Icon"
+                  class="hero__search--icon--svg"/>
+               </div>
+            </form>
+
+            <div class="hero__info">
+               <div class="hero__info--card">
+                  <img
+                     src="./assets/people_icon.svg"
+                     class="hero__info--students--svg"
+                  />
+                  <p class="hero__info--students--text"><strong>5K Students</strong></p>
+               </div>
+               <div class="hero__info--card">
+                  <img
+                     src="./assets/certificate.svg"
+                     class="hero__info--certificate--svg"
+                  />
+                  <p class="hero__info--certificate--text"><strong>+100 Certificate</strong></p>
+               </div>
+               <div class="hero__info--card">
+                  <img
+                     src="./assets/play_btn.svg"
+                     class="hero__info--course--svg"
+                  />
+                  <p class="hero__info--course--text"><strong>+200 Course</strong></p>
+               </div>
+            </div>
+         </div>
+
+         <div class="hero__right">
+            <img
+               src="./assets/hero_img.svg"
+               alt="Student Holding Books"
+               class="hero__image"
+            />
+         </div>
+      </section>
+
+      <section class="pop-categories container">
+         <h2 class="pop-categories__header">Popular Categories</h2>
+
+         <div class="categories">
+            <div class="categories__category">
+               <img
+                  src="./assets/code.svg"
+                  alt="Illustration of the Category"
+                  class="categories__category--pic"
+               />
+               <h2 class="categories__category--header" style="color: #4361EE">Development</h2>
+               <p class="categories__category--desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing
+               </p>
+            </div>
+
+            <div class="categories__category">
+               <img
+                  src="./assets/graphic_logo.svg"
+                  alt="Illustration of the Category"
+                  class="categories__category--pic"
+               />
+               <h2 class="categories__category--header" style="color: #EF476F">Graphic Design</h2>
+               <p class="categories__category--desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing
+               </p>
+            </div>
+
+            <div class="categories__category">
+               <img
+                  src="./assets/data_science.svg"
+                  alt="Illustration of the Category"
+                  class="categories__category--pic"
+               />
+               <h2 class="categories__category--header" style="color: #F35E28">Data Science</h2>
+               <p class="categories__category--desc">
+                  Lorem ipsum dolor sit amet consectetur adipisicing
+               </p>
+            </div>
+         </div>
+
+         <button class="pop-categories--btn button">See All Categories &#8594</button>
+      </section>
+
+      <section class="best-courses container">
+         <h2 class="best-courses__header">Best Courses</h2>
+         
+         <div class="best-courses__selector">
+            <button class="best-courses__selector--selection button">
+               Development
+               <img src="./assets/code-best-courses.svg" alt="Illustration" class="best-courses__selector--selection img">
+            </button>
+
+            <button class="best-courses__selector--selection button">
+               Graphic Design
+               <img src="./assets/graphic_logo-best-courses.svg" alt="Illustration" class="best-courses__selector--selection img">
+            </button>
+
+            <button class="best-courses__selector--selection button">
+               Data Science
+               <img src="./assets/data_science-best-courses.svg" alt="Illustration" class="best-courses__selector--selection img">
+            </button>
+         </div>
+
+         <div class="best-courses__courses">
+            <div class="best-courses__courses--course">
+               <img src="./assets/best-courses-pic.svg" alt="Illustration" class="best-courses__courses--course--pic">
+
+               <h2 class="best-courses__courses--course--header">Become a User Experience Designer</h2>
+               <div class="best-courses__courses--course--info">
+                  <div class="best-courses__courses--course--info--desc">
+                     <img src="./assets/clock.svg">
+                     <p>12 hrs 30 mins</p>
+                  </div>
+
+                  <div class="best-courses__courses--course--info--desc">
+                     <img src="./assets/students.svg">
+                     <p>1000 Students</p>
+                  </div>                  
+               </div>
+
+               <div class="best-courses__courses--course--rate">
+                  <ul class="best-courses__courses--course--rate--ul">
+                     <li><img src="./assets/full_star.svg"></li>
+                     <li><img src="./assets/full_star.svg"></li>
+                     <li><img src="./assets/full_star.svg"></li>
+                     <li><img src="./assets/full_star.svg"></li>
+                     <li><img src="./assets/full_star.svg"></li>
+                  </ul>
+                  <p>4.8</p>
+               </div>
+
+               <div class="best-courses__courses--course--purchase">
+                  <button class="best-courses__courses--course--purchase--btn button">
+                     Buy Now <img src="./assets/cart.svg">
+                  </button>
+                  <p class="best-courses__courses--course--purchase--price">$450</p>
+               </div>
+            </div>
+
+            <div class="best-courses__courses--course">
+               <img src="./assets/best-courses-pic.svg" alt="Illustration" class="best-courses__courses--course--pic">
+
+               <h2 class="best-courses__courses--course--header">Become a User Experience Designer</h2>
+               <div class="best-courses__courses--course--info">
+                  <div class="best-courses__courses--course--info--desc">
+                     <img src="./assets/clock.svg">
+                     <p>12 hrs 30 mins</p>
+                  </div>
+
+                  <div class="best-courses__courses--course--info--desc">
+                     <img src="./assets/students.svg">
+                     <p>1000 Students</p>
+                  </div>                  
+               </div>
+
+               <div class="best-courses__courses--course--rate">
+                  <ul class="best-courses__courses--course--rate--ul">
+                     <li><img src="./assets/full_star.svg"></li>
+                     <li><img src="./assets/full_star.svg"></li>
+                     <li><img src="./assets/full_star.svg"></li>
+                     <li><img src="./assets/full_star.svg"></li>
+                     <li><img src="./assets/full_star.svg"></li>
+                  </ul>
+                  <p>4.8</p>
+               </div>
+
+               <div class="best-courses__courses--course--purchase">
+                  <button class="best-courses__courses--course--purchase--btn button">
+                     Buy Now <img src="./assets/cart.svg">
+                  </button>
+                  <p class="best-courses__courses--course--purchase--price">$450</p>
+               </div>
+            </div>
+
+            <div class="best-courses__courses--course">
+               <img src="./assets/best-courses-pic.svg" alt="Illustration" class="best-courses__courses--course--pic">
+
+               <h2 class="best-courses__courses--course--header">Become a User Experience Designer</h2>
+               <div class="best-courses__courses--course--info">
+                  <div class="best-courses__courses--course--info--desc">
+                     <img src="./assets/clock.svg">
+                     <p>12 hrs 30 mins</p>
+                  </div>
+
+                  <div class="best-courses__courses--course--info--desc">
+                     <img src="./assets/students.svg">
+                     <p>1000 Students</p>
+                  </div>                  
+               </div>
+
+               <div class="best-courses__courses--course--rate">
+                  <ul class="best-courses__courses--course--rate--ul">
+                     <li><img src="./assets/full_star.svg"></li>
+                     <li><img src="./assets/full_star.svg"></li>
+                     <li><img src="./assets/full_star.svg"></li>
+                     <li><img src="./assets/full_star.svg"></li>
+                     <li><img src="./assets/full_star.svg"></li>
+                  </ul>
+                  <p>4.8</p>
+               </div>
+
+               <div class="best-courses__courses--course--purchase">
+                  <button class="best-courses__courses--course--purchase--btn button">
+                     Buy Now <img src="./assets/cart.svg">
+                  </button>
+                  <p class="best-courses__courses--course--purchase--price">$450</p>
+               </div>
+            </div>
+         </div>
+
+      </section>
+
+      <section class="about-us container">
+         <h2 class="about-us__header">About Us</h2>
+
+         <div class="about-us__flex">
+            <div class="about-us__left">
+               <h2 class="about-us__left--header">Why Should You <span>Choose<br>Our Platform</span></h2>
+               <p class="about-us__left--desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora aliquam vel tempore animi dolores, nostrum repellendus!</p>
+   
+               <div class="about-us__left--info">
+                  <div class="about-us__left--info--card">
+                     <img src="./assets/students.svg">
+                     <p>5K Students</p>
+                  </div>
+   
+                  <div class="about-us__left--info--card">
+                     <img src="./assets/play_btn.svg">
+                     <p>200+ Course</p>
+                  </div>
+   
+                  <div class="about-us__left--info--card">
+                     <img src="./assets/certificate.svg">
+                     <p>100+ Certificate</p>
+                  </div>
+   
+                  <div class="about-us__left--info--card">
+                     <img src="./assets/shield.svg">
+                     <p>Trusted By 25+ Companies</p>
+                  </div>
+               </div>
+   
+               <button class="about-us__left--btn button">
+                  Get Started &#8594
+               </button>
+            </div>
+   
+            <div class="about-us__right">
+               <img src="./assets/ceo.svg" alt="Photo of the CEO" class="about-us__right--pic">
+            </div>
+         </div>
+      </section>
+
+      <script src="./js/main.js"></script>
+   </body>
+</html>
