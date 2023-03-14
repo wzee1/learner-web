@@ -131,12 +131,14 @@ html {
    margin-inline: auto;
    margin-block: 4rem;
    padding-inline: 2rem;
-   max-width: 1600px;
+   max-width: 1500px;
 }
 
 header {
+   left: 0;
+   right: 0;
    margin-inline: auto;  
-   width: 1600px;
+   max-width: 1500px;
 }
 
 .button {
@@ -226,7 +228,7 @@ header {
                a {
                   transition: color .4s;
                   &:hover {
-                     color: var(--primaryColorDark);
+                     color: var(--primaryColor);
                   }        
                }
             }
@@ -237,6 +239,7 @@ header {
                border-radius: 1rem;
                border: var(--primaryColor) 1px solid;
                transition: .4s;
+               margin-top: 2rem;
 
                a {
                   color: var(--primaryColorDark);
@@ -295,13 +298,6 @@ section.hero {
             color: var(--primaryColor);
             position: relative;
             z-index: -1;
-
-            /*&::after {
-               content: url("../assets/hero_header_circle.svg");
-               position: absolute;
-               top: 0;
-               left: 0;
-            }*/
          }
       }
       
@@ -378,7 +374,7 @@ section.pop-categories {
          background-color: var(--primaryColor);
 
          position: absolute;
-         top: 140%;
+         top: 110%;
          left: 20%;
       }
    }
@@ -420,9 +416,19 @@ section.pop-categories {
       background-color: var(--primaryColor);
       color: white;
       transition: .25s;
+      
+      span {
+         margin-left: .5rem;
+         transition: .25s;
+         font-size: 1.2rem;
+      }
 
       &:hover {
          background-color: var(--primaryColorDark);
+
+         span {
+            margin-left: 1rem;
+         }
       }
    }
 }
@@ -455,14 +461,13 @@ section.best-courses {
          background-color: var(--primaryColor);
 
          position: absolute;
-         top: 140%;
+         top: 110%;
          left: 6%;
       }
    }
 
    .best-courses__selector {
       display: flex;
-      justify-content: center;
       align-items: center;
       flex-direction: column;
       gap: 1rem;
@@ -482,11 +487,16 @@ section.best-courses {
             background-color: transparent;
             margin-left: .5rem;
             height: 1.5rem;
+            transition: .25s;
          }
 
          &:hover {
             background-color: var(--primaryColor);
             color: white;
+
+            img {
+               filter: invert(100%) sepia(3%) saturate(0%) hue-rotate(237deg) brightness(104%) contrast(104%);
+            }
          }
       }
    }
@@ -583,8 +593,16 @@ section.best-courses {
                color: white;
                transition: .25s;
 
+               img {
+                  transition: .25s;
+               }
+
                &:hover {
                   background-color: var(--primaryColorDark);
+
+                  img {
+                     margin-left: .5rem;
+                  }
                }
             }
 
@@ -604,6 +622,11 @@ section.best-courses {
 // ----------------
 
 section.about-us {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+
    .about-us__header {
       display: flex;
       justify-content: center;
@@ -625,8 +648,8 @@ section.about-us {
          background-color: var(--primaryColor);
 
          position: absolute;
-         top: 140%;
-         left: 35%;
+         top: 110%;
+         left: -10%;
       }
    }
 
@@ -694,8 +717,18 @@ section.about-us {
             border-radius: 1rem;
             transition: .25s;
    
+            span {
+               margin-left: .5rem;
+               transition: .25s;
+               font-size: 1.2rem;
+            }
+
             &:hover {
                background-color: var(--primaryColorDark);
+
+               span {
+                  margin-left: 1rem;
+               }
             }
          }
       }
@@ -707,6 +740,268 @@ section.about-us {
 // Media Queries
 // -------------
 // -------------
+
+@media screen and (max-width: 320px) { // Galaxy Fold
+   .container {
+      padding-inline: 1rem;
+   }
+
+   header {
+      .nav__content {
+         .nav__notExtended {
+            padding-inline: 1rem;
+            padding-block: .25rem;
+
+            .nav__logo {
+               transform: translateY(.55rem);
+
+               a {
+                  img {
+                     height: 60%;
+                  }
+               }
+            }
+      
+            .nav__hamburger {
+               width: 20px;
+            }
+         }
+   
+         nav {
+            .nav__menu {
+               .nav__links {
+                  font-size: 1rem;
+               }
+   
+               .sign-in {
+                  font-size: 1rem;
+                  margin-top: 1rem;
+               }
+   
+               .sign-up {
+                  font-size: 1rem;
+               }
+            }
+         }
+      }
+   }
+
+   section.hero {
+      margin-top: 6rem;
+
+      .hero__left {
+         .hero__header {
+            font-size: 1.5rem;
+         }
+         
+         .hero__desc {
+            font-size: .75rem;
+            margin-bottom: 1rem;
+         }
+      
+         .hero__search {
+            .hero__search--input {
+               padding: .8rem;
+               font-size: .7rem;
+            }
+   
+            .hero__search--icon {
+               .hero__search--icon--svg {
+                  height: 40%;
+               }
+            }
+         }
+      }
+   }
+
+   section.pop-categories {
+      .pop-categories__header {
+         font-size: 1.25rem;
+
+         &::after {
+            height: .2rem;
+            left: 15%;
+         }
+      }
+   
+      .categories {
+         gap: 1.5rem;
+         
+         .categories__category {
+            padding: 1rem;
+   
+            .categories__category--pic {
+               height: 5rem;
+            }
+   
+            .categories__category--header {
+               font-size: 1rem;
+               font-weight: bold;
+               margin-bottom: 1rem;
+            }
+            
+            .categories__category--desc {
+               font-size: .8rem;
+            }
+         }
+      }
+   
+      .pop-categories--btn {
+         margin-top: 2rem;
+         font-size: .8rem;
+         
+         span {
+            margin-left: .5rem;
+            font-size: .8rem;
+         }
+      }
+   }
+
+   section.best-courses {
+      .best-courses__header {
+         font-size: 1.25rem;
+   
+         &::after {
+            height: .2rem;
+            left: -3%;
+         }
+      }
+   
+      .best-courses__selector {
+         gap: .75rem;
+   
+         .best-courses__selector--selection {
+            img {
+               height: 1.25rem;
+            }
+         }
+      }
+   
+      .best-courses__courses {
+         gap: 2rem;
+         
+         .best-courses__courses--course {
+            .best-courses__courses--course--pic {
+               width: 100%;
+               margin-bottom: .75rem;
+            }
+            
+            .best-courses__courses--course--header {
+               font-size: 1.1rem;
+               margin-bottom: 1.25rem;
+               padding-inline: 1rem;
+            }
+   
+            .best-courses__courses--course--info {
+               padding-inline: 1rem;
+               margin-bottom: 1rem;
+   
+               .best-courses__courses--course--info--desc {
+                  font-size: .6rem;
+                  
+                  img {
+                     height: .9rem;
+                  }
+               }            
+            }
+   
+            .best-courses__courses--course--rate {
+               padding-inline: 1rem;
+               margin-bottom: 1rem;
+   
+               .best-courses__courses--course--rate--ul {
+                  li {
+                     img {
+                        height: .7rem;
+                     }
+                  }
+               }
+   
+               p {
+                  font-size: .8rem;
+               }
+            }
+   
+            .best-courses__courses--course--purchase {
+               padding-inline: 1rem;
+   
+               .best-courses__courses--course--purchase--btn {
+                  font-size: .8rem;
+                  padding-inline: 1rem;
+                  padding-block: .5rem;
+
+                  img {
+                     height: 1rem;
+                  }
+               }
+   
+               .best-courses__courses--course--purchase--price {
+                  font-size: 1rem;
+               }
+            }
+         }
+      }
+   }
+
+   section.about-us {
+      .about-us__header {
+         font-size: 1.25rem;
+         margin-bottom: 3rem;
+   
+         &::after {
+            width: 6rem;
+            height: .2rem;
+            left: -2%;
+         }
+      }
+   
+      .about-us__flex {
+         .about-us__left {
+            margin-bottom: 5rem;
+
+            .about-us__left--header {
+               text-align: center;
+               font-size: 1.1rem;
+               margin-bottom: .75rem;
+            }
+      
+            .about-us__left--desc {
+               font-size: .8rem;
+               margin-bottom: 1rem;
+               text-align: center;
+               width: 100%;
+            }
+      
+            .about-us__left--info {
+               justify-content: center;
+               align-items: center;
+
+               .about-us__left--info--card {
+                  font-size: .8rem;
+                  
+                  img {
+                     height: .9rem;
+                  }
+               }
+            }
+      
+            .about-us__left--btn {
+               position: absolute;
+               left: 50%;
+               transform: translateX(-50%);
+
+               margin-top: 0;
+               font-size: .8rem;
+               
+               span {
+                  margin-left: .5rem;
+                  font-size: .8rem;
+               }
+            }
+         }
+      }
+   }
+}
 
 @media screen and (min-width: 630px) {
    section.hero {
@@ -777,7 +1072,7 @@ section.about-us {
 
          &::after {
             width: 10rem;
-            left: 35%;
+            left: -12.5%;
          }
       }
    
@@ -793,7 +1088,165 @@ section.about-us {
    }
 }
 
-@media screen and (min-width: 1032px) { // Desktop
+@media screen and (min-width: 800px) { // Desktop
+   section.hero {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10rem;
+
+      .hero__left {
+         .hero__header {
+            font-size: 2.2rem;
+         }
+         
+         .hero__desc {
+            font-size: 1rem;
+         }
+      
+         .hero__search {
+            width: 70%;
+   
+            .hero__search--input {
+               font-size: 1rem;
+            }
+   
+            .hero__search--icon {
+               width: 30%;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               cursor: pointer;
+               
+               background-color: #2161DF;
+               border-radius: 1rem;
+   
+               .hero__search--icon--svg {
+                  margin: 0;
+                  height: 50%;
+               }
+            }
+         }
+      }
+
+      .hero__right {
+         .hero__image {
+            height: 20rem;
+         }
+      }
+   }
+   
+   section.pop-categories {
+      margin-bottom: 10rem;
+
+      .pop-categories__header {
+         font-size: 2rem;
+         margin-bottom: 4rem;
+
+         &::after {
+            width: 12rem;
+            left: 19%;
+         }
+      }
+   
+      .categories {
+         flex-direction: row;
+      }
+   
+      .pop-categories--btn {
+         font-size: 1rem;
+      }
+   }
+
+   section.best-courses {
+      margin-bottom: 10rem;
+
+      .best-courses__header {
+         font-size: 2rem;
+         margin-bottom: 4rem;
+   
+         &::after {
+            width: 10rem;
+            left: 12%;
+         }
+      }
+
+      .best-courses__selector {
+         .best-courses__selector--selection {
+            padding-block: 1.5rem;
+            flex-direction: row;
+         }
+      }
+   
+      .best-courses__courses {
+         flex-direction: row;
+      }
+   }
+
+   section.about-us {
+      margin-bottom: 10rem;
+
+      .about-us__header {
+         font-size: 2rem;
+         margin-bottom: 4rem;
+
+         &::after {
+            left: -5%;
+         }
+      }
+      
+      .about-us__flex {
+         flex-direction: row;
+
+         .about-us__left {
+            .about-us__left--header {
+               font-size: 2.5rem;
+            }
+      
+            .about-us__left--desc {
+               font-size: 1.2rem;
+               margin-bottom: 2rem;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 930px) { // Hero Image fix
+   section.hero {
+      .hero__right {
+         .hero__image {
+            height: 25rem;
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 1050px) { // Hero Info Appears + Hero Image fix
+   section.hero {
+      .hero__left {
+         .hero__info {
+            display: flex;
+            gap: 2rem;
+   
+            .hero__info--card {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               gap: 1rem;
+            }
+         }
+      }
+
+      .hero__right {
+         .hero__image {
+            height: 28rem;
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 1120px) { // Nav Change + Hero Changes
    header {
       .nav__content {
          padding-block: unset;
@@ -833,6 +1286,8 @@ section.about-us {
 
                .sign-in {
                   font-size: 1rem;
+                  margin-top: 0;
+                  margin-left: 2rem;
                }
 
                .sign-up {
@@ -844,11 +1299,6 @@ section.about-us {
    }
 
    section.hero {
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 10rem;
-
       .hero__left {
          .hero__header {
             font-size: 2.5rem;
@@ -858,37 +1308,15 @@ section.about-us {
             font-size: 1.25rem;
          }
       
-         .hero__search {
-            width: 70%;
-   
-            .hero__search--input {
-               font-size: 1rem;
-            }
-   
-            .hero__search--icon {
-               width: 30%;
-               display: flex;
-               justify-content: center;
-               align-items: center;
-               cursor: pointer;
-               
-               background-color: #2161DF;
-               border-radius: 1rem;
-   
-               .hero__search--icon--svg {
-                  margin: 0;
-                  height: 50%;
-               }
-            }
-         }
-   
          .hero__info {
             display: flex;
             gap: 2rem;
    
             .hero__info--card {
                display: flex;
-               gap: 1rem
+               justify-content: center;
+               align-items: center;
+               gap: 1rem;
             }
          }
       }
@@ -899,80 +1327,6 @@ section.about-us {
          }
       }
    }
-
-   section.pop-categories {
-      margin-bottom: 10rem;
-
-      .pop-categories__header {
-         font-size: 1.8rem;
-         margin-bottom: 4rem;
-
-         &::after {
-            width: 12rem;
-            left: 16%;
-         }
-      }
-   
-      .categories {
-         flex-direction: row;
-      }
-   
-      .pop-categories--btn {
-         font-size: 1rem;
-      }
-   }
-
-   section.best-courses {
-      margin-bottom: 10rem;
-
-      .best-courses__header {
-         font-size: 1.8rem;
-         margin-bottom: 4rem;
-   
-         &::after {
-            width: 10rem;
-            left: 8%;
-         }
-      }
-   
-      .best-courses__courses {
-         flex-direction: row;
-      }
-   }
-
-   section.about-us {
-      margin-bottom: 10rem;
-      flex-direction: row;
-
-      .about-us__header {
-         font-size: 1.8rem;
-         margin-bottom: 4rem;
-
-         &::after {
-            left: 41.75%;
-         }
-      }
-      
-      .about-us__flex {
-         flex-direction: row;
-
-         .about-us__left {
-            .about-us__left--header {
-               font-size: 1.7rem;
-            }
-      
-            .about-us__left--desc {
-               font-size: 1rem;
-            }
-         }
-      }
-   }
-}
-
-
-
-@media screen and (max-width: 320px) { // Galaxy Fold
-   
 }
 
 // --------------------------------

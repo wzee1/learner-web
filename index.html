@@ -30,10 +30,9 @@
             </div>
             <nav id="menu">
                <ul class="nav__menu">
-                  <li class="nav__links"><a href="#">Home</a></li>
-                  <li class="nav__links"><a href="#">About</a></li>
-                  <li class="nav__links"><a href="#">Best Courses</a></li>
-                  <li class="nav__links"><a href="#">About Us</a></li>
+                  <li class="nav__links"><a href="#popular">Popular Category</a></li>
+                  <li class="nav__links"><a href="#best">Best Courses</a></li>
+                  <li class="nav__links"><a href="#about">About Us</a></li>
                   <li class="sign-in button"><a href="#">Sign In</a></li>
                   <li class="sign-up button"><a href="#">Sign Up</a></li>
                </ul>
@@ -92,14 +91,14 @@
 
          <div class="hero__right">
             <img
-               src="./assets/hero_img.svg"
+               src="./assets/hero_img.png"
                alt="Student Holding Books"
                class="hero__image"
             />
          </div>
       </section>
 
-      <section class="pop-categories container">
+      <section class="pop-categories container" id="popular">
          <h2 class="pop-categories__header">Popular Categories</h2>
 
          <div class="categories">
@@ -140,26 +139,26 @@
             </div>
          </div>
 
-         <button class="pop-categories--btn button">See All Categories &#8594</button>
+         <button class="pop-categories--btn button">See All Categories <span>&#8594</span></button>
       </section>
 
-      <section class="best-courses container">
+      <section class="best-courses container" id="best">
          <h2 class="best-courses__header">Best Courses</h2>
          
          <div class="best-courses__selector">
             <button class="best-courses__selector--selection button">
                Development
-               <img src="./assets/code-best-courses.svg" alt="Illustration" class="best-courses__selector--selection img">
+               <img src="./assets/code-best-courses.svg" alt="Illustration" class="best-courses__selector--selection--img">
             </button>
 
             <button class="best-courses__selector--selection button">
                Graphic Design
-               <img src="./assets/graphic_logo-best-courses.svg" alt="Illustration" class="best-courses__selector--selection img">
+               <img src="./assets/graphic_logo-best-courses.svg" alt="Illustration" class="best-courses__selector--selection--img">
             </button>
 
             <button class="best-courses__selector--selection button">
                Data Science
-               <img src="./assets/data_science-best-courses.svg" alt="Illustration" class="best-courses__selector--selection img">
+               <img src="./assets/data_science-best-courses.svg" alt="Illustration" class="best-courses__selector--selection--img">
             </button>
          </div>
 
@@ -272,7 +271,7 @@
 
       </section>
 
-      <section class="about-us container">
+      <section class="about-us container" id="about">
          <h2 class="about-us__header">About Us</h2>
 
          <div class="about-us__flex">
@@ -303,12 +302,12 @@
                </div>
    
                <button class="about-us__left--btn button">
-                  Get Started &#8594
+                  Get Started <span>&#8594</span>
                </button>
             </div>
    
             <div class="about-us__right">
-               <img src="./assets/ceo.svg" alt="Photo of the CEO" class="about-us__right--pic">
+               <img src="./assets/ceo.png" alt="Photo of the CEO" class="about-us__right--pic">
             </div>
          </div>
       </section>
